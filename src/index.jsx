@@ -1,8 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './index.css';
+
+if (process.env.NODE_ENV === 'development') {
+  // eslint-disable-next-line global-require
+  const worker = require('./mocks/browser').default;
+  worker.start();
+}
 
 ReactDOM.render(
   <React.StrictMode>
