@@ -1,16 +1,20 @@
 {
-    "extends": "airbnb",
+    "extends": ["airbnb", "prettier"],
+    "plugins": ["prettier"],
     "settings": {
-        "import/resolver": {
-          "alias": {
-            "map": [
-              ["@", "./src"],
-              ["@root', './"]
-            ],
-            "extensions": [".js", ".jsx"]
-          }
+      "import/resolver": {
+        "alias": {
+          "map": [
+            ["@", "./src"],
+            ["@root', './"]
+          ],
+          "extensions": [".js", ".jsx"]
         }
       }
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    }
 }
   
 

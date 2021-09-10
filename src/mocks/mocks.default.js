@@ -8,10 +8,3 @@ export const rests = {
     },
   },
 };
-
-const modules = {
-  enableAll,
-  rests,
-};
-
-export default modules;
